@@ -1,0 +1,484 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #4f46e5;
+    --primary-dark: #4338ca;
+    --navy: #111827;
+    --navy-light: #1f2937;
+    --background: #f5f7fb;
+    --surface: #ffffff;
+    --text: #172033;
+    --muted: #8490a5;
+    --border: #e8ecf3;
+    --success: #059669;
+    --danger: #dc2626;
+    --radius: 14px;
+    --shadow: 0 8px 30px rgba(23, 32, 51, .05);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'DM Sans', Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: .2s ease;
+}
+
+a:hover {
+    color: var(--primary-dark);
+}
+
+/* Dashboard header */
+.dashboard-header {
+    background: var(--navy);
+    color: white;
+    padding: 20px 5%;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .12);
+}
+
+.dashboard-header h1 {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -.7px;
+    margin-bottom: 18px;
+}
+
+.dashboard-header nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.dashboard-header nav a {
+    color: #cbd5e1;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 13px;
+    border-radius: 8px;
+}
+
+.dashboard-header nav a:hover {
+    color: white;
+    background: rgba(255, 255, 255, .1);
+    text-decoration: none;
+}
+
+/* Main dashboard */
+.dashboard-container {
+    width: min(1250px, 90%);
+    margin: 42px auto;
+}
+
+.dashboard-container h2 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -.8px;
+    margin-bottom: 5px;
+}
+
+.dashboard-container > p {
+    color: var(--muted);
+    margin-bottom: 30px;
+}
+
+/* Dashboard cards */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.dashboard-card {
+    position: relative;
+    padding: 27px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(23, 32, 51, .09);
+}
+
+.dashboard-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+.dashboard-card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.dashboard-card a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    background: #eef2ff;
+    color: var(--primary);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.dashboard-card a:hover {
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+}
+
+/* General content panels */
+main section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* Forms */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #dce2ec;
+    border-radius: 9px;
+    background: white;
+    color: var(--text);
+    font: inherit;
+    font-size: 14px;
+    transition: border-color .2s, box-shadow .2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, .12);
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #475569;
+}
+
+/* Buttons */
+button {
+    border: none;
+    border-radius: 9px;
+    padding: 12px 20px;
+    background: var(--primary);
+    color: white;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th {
+    background: #f8fafc;
+    color: #64748b;
+    font-size: 12px;
+    font-weight: 800;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+th, td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+td {
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background: #f8faff;
+}
+
+/* Login page */
+.login-container {
+    width: min(430px, calc(100% - 32px));
+    margin: 75px auto;
+    padding: 36px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: 0 18px 50px rgba(23, 32, 51, .09);
+}
+
+.login-container h1 {
+    color: var(--primary);
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.login-container > p {
+    color: var(--muted);
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.login-container form {
+    display: grid;
+    gap: 10px;
+}
+
+.login-container button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.error-message {
+    color: var(--danger) !important;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .dashboard-header {
+        padding: 18px 5%;
+    }
+
+    .dashboard-header nav {
+        gap: 5px;
+    }
+
+    .dashboard-header nav a {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .dashboard-container {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .dashboard-container h2 {
+        font-size: 23px;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .login-container {
+        margin: 35px auto;
+        padding: 25px;
+    }
+
+    table {
+        min-width: 650px;
+    }
+}
+
+/* ===== SIDEBAR NAVIGATION ===== */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background: #111827;
+    color: #fff;
+    padding: 28px 18px;
+    z-index: 1000;
+}
+
+.sidebar-brand {
+    padding: 0 12px 35px;
+    border-bottom: 1px solid #2d3748;
+}
+
+.sidebar-brand h1 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+
+.sidebar-brand h1 span {
+    color: #818cf8;
+}
+
+.sidebar-brand small {
+    display: block;
+    margin-top: 7px;
+    color: #9ca3af;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+}
+
+.sidebar-nav {
+    margin-top: 30px;
+}
+
+.nav-label {
+    color: #8490a3;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    padding: 0 12px;
+    margin: 25px 0 12px;
+}
+
+.sidebar-nav a {
+    display: block;
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 12px 14px;
+    margin: 5px 0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+    background: #263449;
+    color: #fff;
+}
+
+.sidebar-nav a.active {
+    background: #4f46e5;
+    color: #fff;
+}
+
+/* Dashboard content moves beside sidebar */
+.dashboard-header {
+    display: none;
+}
+
+.dashboard-container {
+    margin-left: 250px;
+    padding: 35px;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .sidebar-nav {
+        margin-top: 15px;
+    }
+
+    .sidebar-nav a {
+        display: inline-block;
+    }
+
+    .dashboard-container {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
+
+ assets/css/style.css 
+
+/* ===== REPORTS DASHBOARD ===== */
+
+.main-content {
+    margin-left: 250px;
+    padding: 40px;
+    min-height: 100vh;
+}
+
+.main-content h1 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+    margin-bottom: 8px;
+}
+
+.main-content > p {
+    color: var(--muted);
+    margin-bottom: 30px;
+}
+
+.main-content .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.main-content .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 35px rgba(23, 32, 51, .09);
+}
+
+.main-content .card h2 {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.main-content .card p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.main-content .card a {
+    display: inline-block;
+    padding: 10px 17px;
+    background: #eef2ff;
+    color: var(--primary);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.main-content .card a:hover {
+    background: var(--primary);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+}
