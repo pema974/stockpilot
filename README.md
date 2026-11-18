@@ -7,3 +7,7 @@ A PHP and MySQL-based inventory management system.
 ### Dashboard
 
 ![StockPilot Dashboard](screenshots/dashboard.png)
+
+### Products
+
+![StockPilot Products](screenshots/products.png)
